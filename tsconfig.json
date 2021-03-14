@@ -4,14 +4,15 @@
   "exclude": ["node_modules", "build"],
   "compilerOptions": {
     "outDir": "build",
-    "rootDir": "",
+    "rootDir": "./",
     "sourceMap": true,
+    "typeRoots": ["@adonisjs/core/build/adonis-typings/index.d.ts"],
     "paths": {
-      "App/*": ["app/*"],
-      "Config/*": ["config/*"],
-      "Contracts/*": ["contracts/*"],
-      "Database/*": ["database/*"]
+      "App/*": ["./app/*"],
+      "Config/*": ["./config/*"],
+      "Contracts/*": ["./contracts/*"],
+      "Database/*": ["./database/*"]
     },
-    "types": ["@adonisjs/core", "@adonisjs/repl"]
+    "types": ["@adonisjs/core/**/*.d.ts", "@adonisjs/repl/**/*.d.ts", "@adonisjs/core/build/adonis-typings/index.d.ts"]
   }
 }
